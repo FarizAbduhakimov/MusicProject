@@ -1,5 +1,4 @@
 from django import template
-from matplotlib import artist
 from musics.models import Category
 
 register = template.Library()
