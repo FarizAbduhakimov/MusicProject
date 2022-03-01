@@ -1,0 +1,81 @@
+{% extends 'musics/base.html' %}
+{% block content %}
+<section class="miscellaneous-area section-padding-100-0">
+    <div class="container">
+        <div class="row">
+            <!-- ***** Weeks Top ***** -->
+            <div class="col-12 col-lg-4">
+                <div class="weeks-top-area mb-100">
+                    <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                        <p>See what’s new</p>
+                        <h2>This week’s top</h2>
+                    </div>
+
+                    <!-- Single Top Item -->
+                    {% for album in albums %}
+                    <div class="single-top-item d-flex wow fadeInUp" data-wow-delay="100ms">
+                        <div class="thumbnail">
+                            <img src="{{ album.image.url }}" alt="">
+                        </div>
+                        <div class="content-">
+                            <h6>{{ album.title }}</h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+
+            <!-- ***** New Hits Songs ***** -->
+            <div class="col-12 col-lg-4">
+                <div class="new-hits-area mb-100">
+                    <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                        <p>See what’s new</p>
+                        <h2>New Hits</h2>
+                    </div>
+
+                    <!-- Single Top Item -->
+                    {% for music in musics %}
+                    <div class="single-new-item d-flex align-items-center justify-content-between wow fadeInUp" data-wow-delay="100ms">
+                        <div class="first-part d-flex align-items-center">
+                            <div class="thumbnail">
+                                <img src="{{ music.poster.url }}" alt="">
+                            </div>
+                            <div class="content-">
+                                <h6>{{ music.artist }}</h6>
+                                <p>{{ music.title }}</p>
+                            </div>
+                        </div>
+                        <audio preload="auto" controls>
+                            <source src=" {% if music.music_file %} {{ music.music_file.url }} {% endif %}" type="audio/wav">
+                        </audio>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+
+            <!-- ***** Popular Artists ***** -->
+            <div class="col-12 col-lg-4">
+                <div class="popular-artists-area mb-100">
+                    <div class="section-heading text-left mb-50 wow fadeInUp" data-wow-delay="50ms">
+                        <p>See what’s new</p>
+                        <h2>Popular Artist</h2>
+                    </div>
+
+                    <!-- Single Artist -->
+                    {% for artist in artists %}
+                    <div class="single-artists d-flex align-items-center wow fadeInUp" data-wow-delay="100ms">
+                        <div class="thumbnail">
+                            <img src="{{ artist.image.url }}" alt="">
+                        </div>
+                        <div class="content-">
+                            <p>{{ artist.name }}</p>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

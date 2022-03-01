@@ -1,0 +1,43 @@
+{% extends 'musics/base.html' %}
+{% block content %}
+
+<section class="login-area section-padding-100">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-8">
+                <div class="login-content">
+                    <h3>Welcome 🎶</h3>
+                    <!-- Login Form -->
+                    <div class="login-form">
+                        <form action="" method="POST">
+                            {% csrf_token %}
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Username</label>
+                                {{form.username}}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                {{form.email}}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Password</label>
+                                {{form.password1}}
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputPassword1">Confirm Password</label>
+                                {{form.password2}}
+                            </div>
+                            <button type="submit" class="btn oneMusic-btn mt-30">Register Account</button>
+                        </form>
+                    </div>
+                    {{form.errors}}
+                    <div class="mt-4">
+                        <div class="d-flex justify-content-center links">
+                            Already have an account? <a href="{% url 'login' %}" class="ml-2">Login</a>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
