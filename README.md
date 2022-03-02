@@ -5,7 +5,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About Project
 Hi guys👋. This is my Django Music Project. With this application you can enjoy listening musics online 😃. 
-I did this project only for part of backend (experiment) myself and I also worked with templates:)
+I did this project only for part of backend (experiment) myself.
 
 
 <!-- GETTING STARTED -->
