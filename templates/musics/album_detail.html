@@ -1,0 +1,37 @@
+{% extends 'musics/base.html' %}
+{% block album %}
+<div class="add-area mb-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="adds">
+                    <img src="{{ album.image.url }}" alt="">
+                    <h3>{{ album.title }}</h3>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% for music in albums %}
+        <div class="container">
+            <div class="single-song-area mb-30 d-flex flex-wrap align-items-end">
+                <div class="song-thumbnail">
+                        <img src="{{ music.poster.url }}" alt="">
+                </div>
+                <div class="song-play-area">
+                    <div class="song-name">
+                        <p>{{ music.artist }} - {{ music.title }}</p>
+                    </div>
+                        <audio preload="auto" controls>
+                            <source src=" {% if music.music_file %} {{ music.music_file.url }} {% endif %}" type="audio/wav">
+                        </audio>
+                </div>
+            </div>
+            </div>
+            {% endfor %}
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock album %}
