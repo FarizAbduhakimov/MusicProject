@@ -101,7 +101,6 @@ class Music(models.Model):
     url = models.SlugField(max_length=150, unique=True)
     time_create = models.DateTimeField(auto_now_add=True, null=True)
     draft = models.BooleanField("Draft", default=False)
-    # pk = models.AutoField(primary_key=True)
 
     def __str__(self):
         return self.title
