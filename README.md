@@ -26,7 +26,7 @@ SECRET_KEY = 'YOUR_SECRET_KEY'
 ### Setup:
 
 ```bash
-cd music
+cd MusicProject
 python -m venv env
 source env/scripts/activate
 ```
@@ -37,7 +37,7 @@ source env/scripts/activate
 ```bash
 python manage.py runserver
   . . .
- * Running on http://127.0.0.1:5000/ (Press CTRL+C to quit)
+ * Running on http://127.0.0.1:8000/ (Press CTRL+C to quit)
 ```
 
 
