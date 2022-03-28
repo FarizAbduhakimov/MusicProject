@@ -1,4 +1,4 @@
-# Django Music Project
+# Django Music Project 🎶 
 
 <div id="top"></div>
 
